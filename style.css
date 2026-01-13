@@ -1,0 +1,499 @@
+/* ================================
+   RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   BASE PAGE STYLING
+================================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.3px;
+}
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+.home-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  width: 650px;
+  margin: 0 auto;
+}
+
+/* ================================
+   SIDEBAR NAVIGATION
+================================ */
+.sidebar {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 2.5;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 6px;
+}
+
+.sidebar a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.sidebar a:hover {
+  color: red;
+  transform: scale(1.05);
+}
+
+.sidebar a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ================================
+   HERO IMAGE
+================================ */
+.hero {
+  margin-top: -20px;
+  flex-shrink: 0;
+}
+
+.hero img {
+  width: 300px;
+  max-width: 70vw;
+  height: auto;
+  display: block;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 60px;
+  color: #555555;
+  padding-bottom: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ================================
+   PROJECTS PAGE BASE
+================================ */
+.projects-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* ================================
+   TOP NAVIGATION
+================================ */
+.projects-page header {
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.projects-page .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects-page .nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.projects-page .nav a:hover {
+  transform: scale(1.05);
+  color: #ff0000;
+}
+
+.projects-page .nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ================================
+   MAIN STAGE AREA
+================================ */
+.projects-container {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 120px;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.projects-stage {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-left: 60px;
+}
+
+/* ================================
+   PROJECT CARD
+================================ */
+.project-card {
+  width: 180px;
+  text-align: left;
+}
+
+.project-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 4px;
+}
+
+.project-card a:hover img {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
+.project-card .year {
+  font-size: 12px;
+  color: #999;
+  margin: 0 0 6px 0;
+  font-weight: normal;
+}
+
+.project-card h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  margin: 0;
+}
+
+/* ================================
+   PROJECTS PAGE FOOTER
+================================ */
+.projects-page footer {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Large Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .home-container {
+    width: 90%;
+    gap: 60px;
+  }
+
+  .projects-stage {
+    padding-left: 40px;
+    gap: 35px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  /* Homepage */
+  .home-container {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    margin-top: 0;
+  }
+
+  .hero img {
+    max-width: 80vw;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  /* Projects Page */
+  .projects-page header {
+    margin-top: 30px;
+  }
+
+  .projects-page .nav a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+
+  .projects-container {
+    padding-top: 80px;
+  }
+
+  .projects-stage {
+    justify-content: center;
+    padding-left: 0;
+    gap: 30px;
+  }
+
+  .project-card {
+    width: 160px;
+  }
+
+  .project-card .year {
+    font-size: 11px;
+  }
+
+  .project-card h3 {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Landscape (640px and below) */
+@media (max-width: 640px) {
+  /* Homepage */
+  .home-container {
+    gap: 35px;
+    padding: 0 15px;
+  }
+
+  .sidebar {
+    font-size: 11px;
+    line-height: 2.3;
+  }
+
+  .hero img {
+    width: 260px;
+    max-width: 85vw;
+  }
+
+  /* Projects Page */
+  .projects-page header {
+    margin-top: 25px;
+  }
+
+  .projects-page .nav a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  .projects-container {
+    padding-top: 60px;
+  }
+
+  .projects-stage {
+    gap: 25px;
+  }
+
+  .project-card {
+    width: 150px;
+  }
+
+  .projects-page footer {
+    font-size: 9px;
+    padding: 15px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  /* Homepage */
+  .home-container {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .sidebar {
+    font-size: 10px;
+    line-height: 2.2;
+  }
+
+  .sidebar li {
+    margin-bottom: 8px;
+  }
+
+  .hero img {
+    width: 240px;
+    max-width: 90vw;
+  }
+
+  footer {
+    font-size: 9px;
+    margin-top: 30px;
+  }
+
+  /* Projects Page */
+  .projects-page header {
+    margin-top: 20px;
+  }
+
+  .projects-page .nav {
+    gap: 6px;
+  }
+
+  .projects-page .nav a {
+    margin: 0 8px;
+    font-size: 11px;
+  }
+
+  .projects-container {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .projects-stage {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 140px;
+  }
+
+  .project-card img {
+    margin-bottom: 10px;
+  }
+
+  .project-card .year {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .project-card h3 {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile (375px and below) */
+@media (max-width: 375px) {
+  /* Homepage */
+  .home-container {
+    gap: 25px;
+  }
+
+  .sidebar {
+    font-size: 9px;
+    line-height: 2;
+  }
+
+  .hero img {
+    width: 220px;
+  }
+
+  /* Projects Page */
+  .projects-page .nav a {
+    margin: 0 6px;
+    font-size: 10px;
+  }
+
+  .projects-stage {
+    gap: 15px;
+  }
+
+  .project-card {
+    width: 130px;
+  }
+
+  .project-card .year {
+    font-size: 9px;
+  }
+
+  .project-card h3 {
+    font-size: 11px;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  /* Homepage */
+  .home-container {
+    gap: 20px;
+  }
+
+  .sidebar {
+    font-size: 8px;
+  }
+
+  .hero img {
+    width: 200px;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+
+  /* Projects Page */
+  .projects-page header {
+    margin-top: 15px;
+  }
+
+  .projects-page .nav a {
+    margin: 0 5px;
+    font-size: 9px;
+  }
+
+  .projects-container {
+    padding-top: 40px;
+  }
+
+  .project-card {
+    width: 120px;
+  }
+
+  .projects-page footer {
+    font-size: 8px;
+  }
+}
