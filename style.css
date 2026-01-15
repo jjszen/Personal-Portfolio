@@ -25,7 +25,7 @@ body {
 }
 
 /* ================================
-   MAIN LAYOUT
+   MAIN LAYOUT (HOMEPAGE)
 ================================ */
 .home-container {
   flex: 1;
@@ -41,8 +41,8 @@ body {
    SIDEBAR NAVIGATION
 ================================ */
 .sidebar {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: 14px;
   line-height: 2.5;
 }
 
@@ -80,7 +80,7 @@ body {
 }
 
 .hero img {
-  width: 300px;
+  width: 350px;
   max-width: 70vw;
   height: auto;
   display: block;
@@ -107,11 +107,11 @@ footer {
   flex-direction: column;
   background: #000;
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
 }
 
 /* ================================
-   TOP NAVIGATION
+   TOP NAVIGATION (PROJECTS)
 ================================ */
 .projects-page header {
   margin-top: 40px;
@@ -148,7 +148,7 @@ footer {
 }
 
 /* ================================
-   MAIN STAGE AREA
+   MAIN STAGE AREA (PROJECTS)
 ================================ */
 .projects-container {
   flex: 1;
@@ -223,19 +223,165 @@ footer {
 }
 
 /* ================================
+   ABOUT PAGE BASE
+================================ */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+}
+
+/* ================================
+   ABOUT PAGE NAVIGATION
+================================ */
+.about-page header {
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-page .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-page .nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.about-page .nav a:hover {
+  transform: scale(1.05);
+  color: #ff0000;
+}
+
+.about-page .nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ================================
+   ABOUT MAIN CONTENT
+================================ */
+.about-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ================================
+   ABOUT TEXT SECTION
+================================ */
+.about-text {
+  flex: 0 1 450px;
+  max-width: 450px;
+}
+
+.about-text h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+}
+
+.about-text p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #ccc;
+  letter-spacing: 0.2px;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  text-align: left;
+  margin-bottom: 16px;  /* Add spacing between paragraphs */
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;  /* Remove margin from last paragraph */
+}
+
+/* ================================
+   ABOUT IMAGE SECTION
+================================ */
+.about-image {
+  flex-shrink: 0;
+}
+
+.about-image img {
+  width: 260px;
+  height: auto;
+  display: block;
+  border: 2px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+  border-color: #555;
+}
+
+/* ================================
+   ABOUT PAGE FOOTER
+================================ */
+.about-page footer {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ================================
    RESPONSIVE BREAKPOINTS
 ================================ */
 
 /* Large Tablets (1024px and below) */
 @media (max-width: 1024px) {
+  /* Homepage */
   .home-container {
     width: 90%;
     gap: 60px;
   }
 
+  /* Projects Page */
   .projects-stage {
     padding-left: 40px;
     gap: 35px;
+  }
+
+  /* About Page */
+  .about-content {
+    gap: 60px;
+  }
+
+  .about-text {
+    max-width: 400px;
+  }
+
+  .about-image img {
+    width: 240px;
   }
 }
 
@@ -300,6 +446,45 @@ footer {
   .project-card h3 {
     font-size: 13px;
   }
+
+  /* About Page */
+  .about-page header {
+    margin-top: 30px;
+  }
+
+  .about-page .nav a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+
+  .about-container {
+    padding: 40px 30px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .about-image img {
+    width: 240px;
+  }
 }
 
 /* Mobile Landscape (640px and below) */
@@ -345,6 +530,40 @@ footer {
   .projects-page footer {
     font-size: 9px;
     padding: 15px;
+  }
+
+  /* About Page */
+  .about-page header {
+    margin-top: 25px;
+  }
+
+  .about-page .nav a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  .about-container {
+    padding: 35px 25px;
+  }
+
+  .about-content {
+    gap: 35px;
+  }
+
+  .about-text h1 {
+    font-size: 15px;
+  }
+
+  .about-text p {
+    font-size: 10px;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  .about-page footer {
+    font-size: 9px;
   }
 }
 
@@ -415,6 +634,38 @@ footer {
   .project-card h3 {
     font-size: 12px;
   }
+
+  /* About Page */
+  .about-page header {
+    margin-top: 20px;
+  }
+
+  .about-page .nav a {
+    margin: 0 8px;
+    font-size: 11px;
+  }
+
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-text h1 {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .about-text p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    width: 200px;
+  }
 }
 
 /* Small Mobile (375px and below) */
@@ -453,6 +704,28 @@ footer {
 
   .project-card h3 {
     font-size: 11px;
+  }
+
+  /* About Page */
+  .about-page .nav a {
+    margin: 0 6px;
+    font-size: 10px;
+  }
+
+  .about-container {
+    padding: 25px 15px;
+  }
+
+  .about-text h1 {
+    font-size: 13px;
+  }
+
+  .about-text p {
+    font-size: 9px;
+  }
+
+  .about-image img {
+    width: 180px;
   }
 }
 
@@ -494,6 +767,383 @@ footer {
   }
 
   .projects-page footer {
+    font-size: 8px;
+  }
+
+  /* About Page */
+  .about-page header {
+    margin-top: 15px;
+  }
+
+  .about-page .nav a {
+    margin: 0 5px;
+    font-size: 9px;
+  }
+
+  .about-container {
+    padding: 20px 10px;
+  }
+
+  .about-text h1 {
+    font-size: 12px;
+  }
+
+  .about-text p {
+    font-size: 8px;
+  }
+
+  .about-image img {
+    width: 160px;
+  }
+
+  .about-page footer {
+    font-size: 8px;
+  }
+}
+
+
+
+
+
+/* ================================
+   CONTACT PAGE BASE
+================================ */
+/* Set up the contact page with black background and white text */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+}
+
+/* ================================
+   CONTACT PAGE NAVIGATION
+================================ */
+/* Style the top navigation bar */
+.contact-page header {
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Flexbox layout for navigation links */
+.contact-page .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual navigation link styling */
+.contact-page .nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+/* Navigation link hover effect - scale up and turn red */
+.contact-page .nav a:hover {
+  transform: scale(1.05);
+  color: #ff0000;
+}
+
+/* Active navigation link styling - underlined and bold */
+.contact-page .nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ================================
+   CONTACT MAIN CONTENT
+================================ */
+/* Center all content vertically and horizontally */
+.contact-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Container for all contact elements */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+}
+
+/* ================================
+   SOCIAL LINKS SECTION
+================================ */
+/* Container for social media links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Individual social media link styling */
+.social-links a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Social link hover effect - turn red and scale up */
+.social-links a:hover {
+  color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* ================================
+   EMAIL SECTION
+================================ */
+/* Container for email button and alternative text - NOW HORIZONTAL */
+.email-section {
+  display: flex;
+  flex-direction: row;  /* Changed from column to row */
+  align-items: center;
+  gap: 12px;  /* Space between email button and text */
+}
+
+/* Email button styling with Japanese brackets */
+.email-button {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+/* Email button hover effect - turn red and scale up */
+.email-button:hover {
+  color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* ================================
+   TOOLTIP SECTION
+================================ */
+/* Container for the "don't like email?" text with tooltip */
+.email-alternative {
+  font-size: 14px;
+  color: #888;
+  cursor: help;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  border-bottom: 1px dotted #888;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;  /* Smooth transition */
+}
+
+/* Change color on hover */
+.email-alternative:hover {
+  color: #aaa;  /* Slightly lighter text */
+  border-bottom-color: #aaa;  /* Slightly lighter underline */
+}
+
+/* Tooltip arrow (triangle pointing down) */
+.email-alternative::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  border: 6px solid transparent;
+  border-top-color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Tooltip box with message */
+.email-alternative::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+/* Show tooltip and arrow on hover */
+.email-alternative:hover::before,
+.email-alternative:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Adjust arrow position on hover */
+.email-alternative:hover::before {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ================================
+   CONTACT PAGE FOOTER
+================================ */
+/* Footer styling at the bottom of the page */
+.contact-page footer {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS - CONTACT PAGE
+================================ */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .contact-page header {
+    margin-top: 30px;
+  }
+
+  .contact-page .nav a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+
+  .contact-container {
+    padding: 40px 30px;
+  }
+
+  .contact-content {
+    gap: 50px;
+  }
+
+  .social-links {
+    gap: 18px;
+  }
+
+  .social-links a,
+  .email-button {
+    font-size: 15px;
+  }
+
+  .email-alternative {
+    font-size: 13px;
+  }
+
+  /* Make tooltip text wrap on smaller screens */
+  .email-alternative::after {
+    white-space: normal;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .contact-page header {
+    margin-top: 20px;
+  }
+
+  .contact-page .nav a {
+    margin: 0 8px;
+    font-size: 11px;
+  }
+
+  .contact-container {
+    padding: 30px 20px;
+  }
+
+  .contact-content {
+    gap: 40px;
+  }
+
+  .social-links {
+    gap: 16px;
+  }
+
+  .social-links a,
+  .email-button {
+    font-size: 14px;
+  }
+
+  .email-alternative {
+    font-size: 12px;
+  }
+
+  .email-section {
+    gap: 16px;
+  }
+}
+
+/* Small Mobile (375px and below) */
+@media (max-width: 375px) {
+  .contact-page .nav a {
+    margin: 0 6px;
+    font-size: 10px;
+  }
+
+  .social-links a,
+  .email-button {
+    font-size: 13px;
+  }
+
+  .email-alternative {
+    font-size: 11px;
+  }
+
+  .email-alternative::after {
+    max-width: 200px;
+    font-size: 10px;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .contact-page header {
+    margin-top: 15px;
+  }
+
+  .contact-page .nav a {
+    margin: 0 5px;
+    font-size: 9px;
+  }
+
+  .contact-container {
+    padding: 20px 10px;
+  }
+
+  .social-links a,
+  .email-button {
+    font-size: 12px;
+  }
+
+  .email-alternative {
+    font-size: 10px;
+  }
+
+  .contact-page footer {
     font-size: 8px;
   }
 }
