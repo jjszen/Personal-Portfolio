@@ -1147,3 +1147,437 @@ footer {
     font-size: 8px;
   }
 }
+
+
+
+/* ================================
+   MEMORY PAGE BASE
+================================ */
+/* Set up the memory page with black background and white text */
+.memory-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+}
+
+/* ================================
+   MEMORY PAGE NAVIGATION
+================================ */
+/* Style the top navigation bar */
+.memory-page header {
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Flexbox layout for navigation links */
+.memory-page .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual navigation link styling */
+.memory-page .nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+/* Navigation link hover effect - scale up and turn red */
+.memory-page .nav a:hover {
+  transform: scale(1.05);
+  color: #ff0000;
+}
+
+/* Active navigation link styling - underlined and bold */
+.memory-page .nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ================================
+   MEMORY MAIN CONTENT
+================================ */
+/* Main container for memory content */
+.memory-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+/* Content wrapper with max width for readability */
+.memory-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ================================
+   MEMORY HEADER
+================================ */
+/* Page title and subtitle section */
+.memory-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* Main page title */
+.memory-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle under the main title */
+.memory-subtitle {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.3px;
+}
+
+/* ================================
+   MEMORY ENTRIES CONTAINER
+================================ */
+/* Container for all memory entries */
+.memory-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* ================================
+   INDIVIDUAL MEMORY ENTRY
+================================ */
+/* Single memory entry container */
+.memory-entry {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #222;
+}
+
+/* Remove border from last entry */
+.memory-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Date stamp at the top of each entry */
+.memory-date {
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Entry title/heading */
+.memory-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+/* Entry content section */
+.memory-content-text {
+  margin-bottom: 16px;
+}
+
+/* Paragraph styling within entry content */
+.memory-content-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+  letter-spacing: 0.2px;
+  margin-bottom: 12px;
+}
+
+/* Remove margin from last paragraph */
+.memory-content-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================
+   TAGS SECTION
+================================ */
+/* Container for tags at the bottom of each entry */
+.memory-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Individual tag styling */
+.tag {
+  font-size: 11px;
+  color: #888;
+  background: #111;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #333;
+  letter-spacing: 0.3px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* Tag hover effect - lighten background and border */
+.tag:hover {
+  background: #1a1a1a;
+  border-color: #444;
+}
+
+/* ================================
+   MEMORY PAGE FOOTER
+================================ */
+/* Footer styling at the bottom of the page */
+.memory-page footer {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS - MEMORY PAGE
+================================ */
+
+/* Large Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .memory-content {
+    max-width: 700px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .memory-page header {
+    margin-top: 30px;
+  }
+
+  .memory-page .nav a {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+
+  .memory-container {
+    padding: 40px 30px;
+  }
+
+  .memory-header {
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+
+  .memory-header h1 {
+    font-size: 22px;
+  }
+
+  .memory-subtitle {
+    font-size: 12px;
+  }
+
+  .memory-entries {
+    gap: 40px;
+  }
+
+  .memory-entry {
+    padding-bottom: 35px;
+  }
+
+  .memory-title {
+    font-size: 18px;
+  }
+
+  .memory-content-text p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Landscape (640px and below) */
+@media (max-width: 640px) {
+  .memory-page header {
+    margin-top: 25px;
+  }
+
+  .memory-page .nav a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  .memory-container {
+    padding: 35px 25px;
+  }
+
+  .memory-header {
+    margin-bottom: 40px;
+  }
+
+  .memory-header h1 {
+    font-size: 20px;
+  }
+
+  .memory-entries {
+    gap: 35px;
+  }
+
+  .memory-entry {
+    padding-bottom: 30px;
+  }
+
+  .memory-title {
+    font-size: 17px;
+  }
+
+  .memory-content-text p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .memory-page header {
+    margin-top: 20px;
+  }
+
+  .memory-page .nav a {
+    margin: 0 8px;
+    font-size: 11px;
+  }
+
+  .memory-container {
+    padding: 30px 20px;
+  }
+
+  .memory-header {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+  }
+
+  .memory-header h1 {
+    font-size: 18px;
+  }
+
+  .memory-subtitle {
+    font-size: 11px;
+  }
+
+  .memory-entries {
+    gap: 30px;
+  }
+
+  .memory-entry {
+    padding-bottom: 25px;
+  }
+
+  .memory-date {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .memory-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .memory-content-text p {
+    font-size: 12px;
+  }
+
+  .memory-tags {
+    margin-top: 14px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}
+
+/* Small Mobile (375px and below) */
+@media (max-width: 375px) {
+  .memory-page .nav a {
+    margin: 0 6px;
+    font-size: 10px;
+  }
+
+  .memory-container {
+    padding: 25px 15px;
+  }
+
+  .memory-header h1 {
+    font-size: 17px;
+  }
+
+  .memory-subtitle {
+    font-size: 10px;
+  }
+
+  .memory-title {
+    font-size: 15px;
+  }
+
+  .memory-content-text p {
+    font-size: 11px;
+  }
+
+  .tag {
+    font-size: 9px;
+  }
+}
+
+/* Very Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .memory-page header {
+    margin-top: 15px;
+  }
+
+  .memory-page .nav a {
+    margin: 0 5px;
+    font-size: 9px;
+  }
+
+  .memory-container {
+    padding: 20px 10px;
+  }
+
+  .memory-header h1 {
+    font-size: 16px;
+  }
+
+  .memory-subtitle {
+    font-size: 9px;
+  }
+
+  .memory-date {
+    font-size: 9px;
+  }
+
+  .memory-title {
+    font-size: 14px;
+  }
+
+  .memory-content-text p {
+    font-size: 10px;
+  }
+
+  .memory-page footer {
+    font-size: 8px;
+  }
+}
